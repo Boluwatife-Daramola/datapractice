@@ -1,5 +1,5 @@
-##Retail dataset
-##check one of the excel files named "Retail dataset"
+##Retail
+##check one of the excel files named "Retail"
 
 1.	Retrieve the total sales for each category in the dataset
 =QUERY(cleandata,"select R,SUM(V) group by R LABEL SUM(V) 'Sum of Total Sales' format sum(V) '#.##' ",1)
