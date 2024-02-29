@@ -2,4 +2,4 @@
 Practical hands-on
 
 
-This repository is a summary result of a current project
+This projects explains my hands-on learning as a data analyst
