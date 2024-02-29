@@ -1,0 +1,32 @@
+##Retail dataset
+##check one of the excel files named "Retail dataset"
+
+1.	Retrieve the total sales for each category in the dataset
+=QUERY(cleandata,"select R,SUM(V) group by R LABEL SUM(V) 'Sum of Total Sales' format sum(V) '#.##' ",1)
+
+2. Find the top 5 customers based on their total profit
+=QUERY(cleandata, "select * order by X DESC LIMIT 5", 1)
+
+3. Calculate the average quantity sold for each customer segment
+=QUERY(cleandata, "SELECT K, AVG(T) GROUP BY K LABEL AVG(T) 'Average Quantity Sold' format avg(T) '#'", 1)
+
+4. Retrieve details of orders shipped using the "Second Class" ship mode
+=QUERY(cleandata,"SELECT * WHERE G = 'Second Class' ",1) 
+
+5. Get the total sales and profit for each region
+=QUERY(cleandata, "select P,SUM(V),SUM(X) GROUP BY P LABEL SUM(V) 'Sum of Total Sales',SUM(X) 'Sum of Profit'",1)
+
+6. Find orders where the profit is greater than 500
+=QUERY(cleandata, "select * where X > 500",1)
+
+7. List the distinct states present in the dataset
+=QUERY(cleandata, " SELECT N, SUM(S) group BY N LABEL SUM(S) 'Sum of Sales' ",1) 
+
+8. Identify the top 3 selling products based on quantity sold
+=QUERY(cleandata,"select Q,T ORDER BY T DESC LIMIT 3",1)
+
+9. Retrieve details of orders shipped to California
+=QUERY(cleandata,"select * where N = 'California'",1)
+
+10. Get the total sales and cost for the "Furniture" category
+=QUERY(cleandata,"SELECT R,V,W WHERE R = 'Furniture' ",1)
