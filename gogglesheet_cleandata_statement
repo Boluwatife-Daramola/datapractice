@@ -1,6 +1,7 @@
 ##cleandata
 ##check one of the csv files named "cleandata.csv"
-##cleandata is a cleaned data of retail.csv
+##cleandata.csv originated from retail.csv which has gone through the data cleaning and feature engineering process
+##retail.csv explains the retail dataset of a global supermarket
 
 1.	Retrieve the total sales for each category in the dataset
 =QUERY(cleandata,"select R,SUM(V) group by R LABEL SUM(V) 'Sum of Total Sales' format sum(V) '#.##' ",1)
